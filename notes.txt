@@ -1,0 +1,12 @@
+Authentication :
+ statefull (uses memory of server and store the data of user)
+ * when server restarts all users get log out
+ * applications that do not require scalability too much.
+ *Increased user increase overhead for server, to maintain state
+
+ stateless (saves the data inside the token itself)
+ * user data is stored in client side(brower)
+ * we can verify its signature with orignal token
+ * Easy to scale : as all data store in client side, no need to assign particular server 
+ * Session data has a particular expiry data
+ JWT -> store data inside payload/tokens along with id
